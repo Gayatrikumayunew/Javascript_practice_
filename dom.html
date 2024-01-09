@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one"><span>Hello</span>hello1</p>
+    <ul><li class="tec">pen</li>
+    <li class="tec">pencil</li>
+    <li class="tec">book</li>
+</ul>
+<!-- tag name 
+ -->
+<h4>hello</h4>
+<h4>hi</h4>
+<h4>hola</h4>
+<!-- query selector -->
+<h2>hello helllo</h2>
+<h2 class="new">hola</h2>
+<h2 id="h">hi</h2>
+<h1></h1>
+    <script>
+        let v=document.getElementById("one")
+        // console.log(v.innerHTML)
+        console.log(v.innerText)
+        // class
+          let v1=document.getElementsByClassName("tec")
+          console.log(v1)
+          console.log(v1[1].innerText)
+          v1[0].innerText="nodejs"
+
+// tag name
+let v3=document.getElementsByTagName("h4")
+console.log(v3[1].innerHTML)
+v3[2].style.color="red"
+
+// query selector
+let b=document.querySelector(".new")
+console.log(b)
+b.className="hellp"
+b.classList="hii, newyr"
+b.setAttribute("id","js")
+    </script>
+    <!-- ---------------------------------part 2 dom------------------- -->
+    <script>
+        let t=document.createElement("h1")
+        t.textContent="hello self created"
+        t.style.fontSize="25px"
+        t.className="domm"
+        document.body.appendChild(t)
+        // remove ele 
+        let del=document.querySelector("ul");
+        console.log(del)
+        let lists=document.querySelectorAll("li");
+        console.log(lists)
+        for(list of lists){
+            ul.removeChild(list)
+        }
+    </script>
+
+
+</body>
+</html>

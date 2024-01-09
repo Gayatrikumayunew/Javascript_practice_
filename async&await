@@ -1,0 +1,17 @@
+function createpromise(){
+    return new Promise(function exec(resolve,reject){
+        setTimeout(function f(){
+            console.log("its timer")
+            resolve("gayu")//resolve("")
+        },3000)
+    })
+}
+async function consume(){
+    console.log("inside")
+    const response=await createpromise();
+    console.log("end",response)
+}
+console.log("started")
+consume()
+
+console.log("started")
